@@ -33,5 +33,7 @@ end
 
 Dictionary = DictionaryFormationVasilakis(train_features);
 
-%%
+%% Implementation of the VLAD 
+
+U = VLADNV(Dictionary,train_features);
 

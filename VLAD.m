@@ -37,3 +37,6 @@ Dictionary = DictionaryFormationVasilakis(train_features);
 
 U = VLADNV(Dictionary,train_features);
 
+%% Product quantization
+
+Codes = ProductQuantizationNV(U);

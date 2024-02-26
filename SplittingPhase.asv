@@ -1,0 +1,17 @@
+function SplittedVectors = SplittingPhase(Vector_Representation,numSubvectors)
+    
+    % Get the dimensions of the VLAD Representation 
+    [~,VLAD_RepDim] = size(Vector_Representation);
+    
+
+    SubVectorDim = VLAD_RepDim / numSubvectors;
+
+    fprintf("Creating %d subvectors of dimension: %d", numSubvectors, ...
+                                                             SubVectorDim);
+    Vector_i = 0;
+    for subVectorDim = 1 : SubVectorDim : size(Vector_Representation,2)
+
+        Vector_i = Vector_i + 1;
+        SubVectors(Vector_i) = Vector_Representation(subVectorDim);
+
+end

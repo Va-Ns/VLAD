@@ -42,7 +42,7 @@ function U_ij = VLADNV(Dictionary,features)
 
             uniqueElementscol = index == cluster;
             Residuals = sum(imageResiduals(uniqueElementscol,:),1);
-            Residuals = Residuals/norm(Residuals);
+            Residuals = fillmissing(Residuals/norm(Residuals),'constant',0);
             ImageRepresentation(cluster,:) = Residuals;
 
         end

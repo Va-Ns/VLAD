@@ -33,7 +33,7 @@ function [Dictionary] =DictionaryFormationVasilakis(train_features,Options)
         training_SIFT_matrix = [training_SIFT_matrix;feature_data.data];
         
     end
-    parfortime = toc;
+    
     
     % Get the size of the SIFT matrix
     [numKeypoints DescDim] = size(training_SIFT_matrix);

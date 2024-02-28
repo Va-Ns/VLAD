@@ -61,6 +61,11 @@ end
                 replicate,iter);
         end
         
+        
+        % Calculate cost for the final centroids
+        [~, ~, sumd] = kmeans(dataGPU, numClusters, 'Start', ...
+            currentCentroids,"MaxIter",20,"Display","iter");
+        
         totalCost = sum(sumd);
 
         % Update the shared variables

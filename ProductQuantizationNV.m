@@ -1,4 +1,4 @@
-function Codes = ProductQuantizationNV(VLAD_Representation,Options)
+function Database = ProductQuantizationNV(VLAD_Representation,Options)
 
     arguments
 
@@ -8,9 +8,13 @@ function Codes = ProductQuantizationNV(VLAD_Representation,Options)
                                         mustBeNonzero} = 8
 
         Options.numCentroids           {mustBeInteger,mustBePositive,...
-                                        mustBeNonzero} = 256
+                                        mustBeNonzero,mustBePowerOfTwo} = 256
                 
     end
+    
+    SubVectorDim = size(VLAD_Representation,2) / Options.numSubvectors;
+    fprintf("Creating %d subvectors of dimension: %d\n", Options.numSubvectors, ...
+                                                             SubVectorDim);
 
     for numImages = 1 : size(VLAD_Representation,1)
 
@@ -20,15 +24,18 @@ function Codes = ProductQuantizationNV(VLAD_Representation,Options)
         
 
         %% Splitting Phase 
+    
+        SplittedVectors = SplittingPhase(Current_VLADImgRep, ...
+                                                    Options.numSubvectors);
+        
+        %% Product Quantization 
 
-        SplittedVectors = SplittingPhase(Current_VLADImgRep,Options.numSubvectors);
-
-
+        Codes = ProductQuantizerNV(SplittedVectors);
+    	Database(numImages).Index = Codes.Index;
+        Database(numImages).Centers = Codes.Centers;
+        
 
     end
-
-
-
 
 
 end

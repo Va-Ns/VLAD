@@ -1,0 +1,14 @@
+function Codes = ProductQuantizerNV(SplittedVectors,Options)
+
+arguments
+
+    SplittedVectors (:,:) {mustBeNonempty,mustB}
+
+end
+
+    for subVector = 1 : size(SplittedVectors,1)
+
+        [Index,Centers] = kmeans(gpuArray(SplittedVectors),);
+       
+
+end

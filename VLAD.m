@@ -24,7 +24,7 @@ newlabels = countEachLabel(splitDatastore);
 train_features = denseSIFTVasilakis(Trainds);
 test_features = denseSIFTVasilakis(Testds);
 
-%% Formating the Dictionary and extracting the SIFT matrices for the sets
+%% Formation of the Dictionary and extracting the SIFT matrices for the sets
 for k = 1: length(train_features)
 
         reset(train_features{k})
@@ -40,9 +40,9 @@ U_Testing = VLADNV(Dictionary,test_features);
 
 %% Product quantization
 
-tic
-Database = ProductQuantizationNV(U_Training);
-Product_quantization_time = toc
+% tic
+% Database = ProductQuantizationNV(U_Training);
+% Product_quantization_time = toc
 
 
 %%

@@ -29,13 +29,11 @@ function U_ij = VLADNV(Dictionary,features)
         % have any local descriptors
         uniqueElements = unique(index);
         
-        % In order to counter the fact of not taking into account those
-        % clusters that don't have any local descriptors, we create an
-        % array of zeros, that have the dimensionality of a k-by-d square
-        % matrix and place the residuals to the corresponding indices of
-        % the matrix, while also leaving the clusters of zero contribution
-        % present. In this way, we can create a stable 1-by-k*d
-        % representation.
+        % In order to counter the fact of not taking into account those clusters that don't have any
+        % local descriptors, we create an array of zeros, that have the dimensionality of a k-by-d 
+        % matrix and place the residuals to the corresponding indices of the matrix, while also 
+        % leaving the clusters of zero contribution present. In this way, we can create a stable 
+        % 1-by-k*d representation.
         ImageRepresentation = zeros(k, d);
 
         for cluster = uniqueElements

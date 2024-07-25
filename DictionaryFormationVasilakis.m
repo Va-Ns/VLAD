@@ -1,4 +1,4 @@
-function [Dictionary] =DictionaryFormationVasilakis(train_features,Options)
+function [Dictionary] = DictionaryFormationVasilakis(train_features,Options)
 
     arguments (Input)
 
@@ -26,7 +26,7 @@ function [Dictionary] =DictionaryFormationVasilakis(train_features,Options)
     % variables and create a collective matrix that contains all the
     % descriptors of all the training images
     
-    parfor i = 1:length(train_features)
+    for i = 1:length(train_features)
     
         feature_data = read(train_features{i});
 
@@ -44,8 +44,7 @@ function [Dictionary] =DictionaryFormationVasilakis(train_features,Options)
     
     validateattributes(Options.Centers,'numeric',{'<',numKeypoints})
     
-    [bestCentroids, bestCost, timeElapsed] = ...
-    miniBatchKMeansVasilakis(training_SIFT_matrix);
+    [bestCentroids, bestCost, timeElapsed] = miniBatchKMeansVasilakis(training_SIFT_matrix);
 
     % Display results
     disp('Best cost:')

@@ -1,5 +1,4 @@
-function [bestCentroids, bestCost, timeElapsed] = miniBatchKMeansVasilakis(data, ...
-    Options)
+function [bestCentroids, bestCost, timeElapsed] = miniBatchKMeansVasilakis(data,Options)
     
 
 arguments 

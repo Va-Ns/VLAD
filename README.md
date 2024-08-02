@@ -4,7 +4,7 @@ This project implements an image classification pipeline using Vector of Locally
 The pipeline involves extracting Dense SIFT features, forming a dictionary, encoding features using VLAD, and training an SVM classifier with various hyperparameter optimizations. 
 The goal is to achieve high accuracy in image classification by leveraging the VLAD encoding scheme.
 
-![VLAD Diagram](https://example.com/vlad_diagram.png)
+
 
 *Visualization of the VLAD encoding process*
 
@@ -27,3 +27,7 @@ To run this project:
 
 ```matlab
 run('VLAD.m')
+```
+
+## License
+This code is for teaching/research purposes only.

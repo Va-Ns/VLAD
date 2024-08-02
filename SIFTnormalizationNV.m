@@ -1,4 +1,4 @@
-function sift_arr = SIFTnormalizationVasilakis(sift_arr)   
+function sift_arr = SIFTnormalizationNV(sift_arr)   
 
     %% Normalization process
     % normalize SIFT descriptors (after Lowe)

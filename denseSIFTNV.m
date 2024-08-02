@@ -163,7 +163,7 @@ while hasdata(inputds)
     % patch (here 16-by-16)
     weight_kernel = zeros(Options.Patch_Size,Options.Patch_Size);
 
-    % Calculation of the patch centre.
+    % Calculation of the patch center.
 
     r = Options.Patch_Size/2; % Here the radius of the patch is
     % calculated, which is half the size of the patch.

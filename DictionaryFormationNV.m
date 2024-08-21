@@ -1,4 +1,4 @@
-function [Dictionary] = DictionaryFormationVasilakis(train_features,Options)
+function [Dictionary] = DictionaryFormationNV(train_features,Options)
 
     arguments (Input)
 
@@ -44,7 +44,7 @@ function [Dictionary] = DictionaryFormationVasilakis(train_features,Options)
     
     validateattributes(Options.Centers,'numeric',{'<',numKeypoints})
     
-    [bestCentroids, bestCost, timeElapsed] = miniBatchKMeansVasilakis(training_SIFT_matrix);
+    [bestCentroids, bestCost, timeElapsed] = miniBatchKMeansNV(training_SIFT_matrix);
 
     % Display results
     disp('Best cost:')

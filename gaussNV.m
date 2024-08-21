@@ -1,4 +1,4 @@
-function [GX,GY] = gaussVasilakis(sigma)
+function [GX,GY] = gaussNV(sigma)
         
         if all(size(sigma) == [1 1])
 

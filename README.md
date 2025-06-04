@@ -7,7 +7,7 @@ The goal is to achieve high accuracy in image classification by leveraging the V
 ![Εικόνα8](https://github.com/user-attachments/assets/d095f4d3-cf6b-49b0-99b8-f36b65b53cbc)
 
 
-*Enlarged view of a Voronoi cell with local descriptors and the cell centre. 
+*Enlarged view of a Voronoi cell with local descriptors and the cell center. 
 Dotted lines depict the residuals between the local descriptors and the respective center.*
 
 ## Project Structure
